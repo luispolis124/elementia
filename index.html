@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Elementia: O Despertar dos Mundos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <!-- BARRA LATERAL (ELEMENTOS) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Elementia</h2>
+                <span id="counter">Descobertas: 4/15</span>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Pesquisar elementos...">
+            </div>
+
+            <div id="elementsList" class="elements-grid">
+                <!-- Os elementos desbloqueados aparecem aqui dinamicamente -->
+            </div>
+
+            <div class="sidebar-footer">
+                <button id="resetBtn" class="btn-secondary">Reiniciar Jogo</button>
+            </div>
+        </aside>
+
+        <!-- ÁREA CENTRAL (CAMPO DE COMBINAÇÃO) -->
+        <main class="craft-area">
+            <header class="top-bar">
+                <h1>Laboratório Alquímico</h1>
+                <p>Arraste ou clique em dois elementos para combiná-los.</p>
+            </header>
+
+            <div class="workspace">
+                <!-- Slot 1 -->
+                <div class="craft-slot" id="slot1" data-slot="1">
+                    <span class="slot-placeholder">Arraste aqui</span>
+                </div>
+
+                <div class="plus-sign">+</div>
+
+                <!-- Slot 2 -->
+                <div class="craft-slot" id="slot2" data-slot="2">
+                    <span class="slot-placeholder">Arraste aqui</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="combineBtn" class="btn-primary" disabled>Combinar Elementos</button>
+                <button id="clearBtn" class="btn-secondary">Limpar Mesa</button>
+            </div>
+
+            <!-- LOG DE MENSAGENS / DESCOBERTAS -->
+            <div id="messageLog" class="message-log">
+                <p>Bem-vindo ao Elementia! Comece combinando os elementos primordiais.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL DE DESCOBERTA ÉPICA / RARIDADE -->
+    <div id="discoveryModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="sparkle-effect"></div>
+            <h3 id="modalTitle">Nova Descoberta!</h3>
+            <div id="modalElement" class="modal-element-card"></div>
+            <h2 id="modalElementName">Nome do Elemento</h2>
+            <p id="modalRarity" class="rarity-badge">Raridade: Comum</p>
+            <button id="closeModalBtn" class="btn-primary">Continuar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
