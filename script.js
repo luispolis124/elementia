@@ -84,8 +84,8 @@ const database = {
         pesadelo: { name: 'Pesadelo', emoji: '😱', rarity: 'Raro', unlocked: false },
         cozinha: { name: 'Cozinha', emoji: '🍳', rarity: 'Comum', unlocked: false },
         quarto: { name: 'Quarto', emoji: '🛏️', rarity: 'Comum', unlocked: false },
-        banheiro: { name: 'Banheiro', emoji: '🚽', rarity: 'Raro', unlocked: false }, // Nome corrigido de 'Quarto' para 'Banheiro'
-        sala: { name: 'Sala', emoji: '🛋️', rarity: 'Comum', unlocked: false } // Vírgula adicionada aqui!
+        banheiro: { name: 'Banheiro', emoji: '🚽', rarity: 'Raro', unlocked: false }, 
+        sala: { name: 'Sala', emoji: '🛋️', rarity: 'Comum', unlocked: false } 
     },
 
     recipes: {
