@@ -84,8 +84,8 @@ const database = {
         pesadelo: { name: 'Pesadelo', emoji: '😱', rarity: 'Raro', unlocked: false },
         cozinha: { name: 'Cozinha', emoji: '🍳', rarity: 'Comum', unlocked: false },
         quarto: { name: 'Quarto', emoji: '🛏️', rarity: 'Comum', unlocked: false },
-        banheiro: { name: 'Quarto', emoji: '🚽', rarity: 'Raro', unlocked: false },
-        sala: { name: 'Sala', emoji: '🛋️', rarity: 'Comum', unlocked: false }
+        banheiro: { name: 'Banheiro', emoji: '🚽', rarity: 'Raro', unlocked: false }, // Nome corrigido de 'Quarto' para 'Banheiro'
+        sala: { name: 'Sala', emoji: '🛋️', rarity: 'Comum', unlocked: false } // Vírgula adicionada aqui!
     },
 
     recipes: {
@@ -162,11 +162,17 @@ const database = {
         'humano+animal': 'inveja',
         'humano+deserto': 'tedio',
 
-        // Receitas de Vida Real (Sono e Família)
+        // Receitas de Vida Real (Sono, Família e Cômodos)
         'humano+ciclo': 'sono',
-        'humano+reproducao': 'familia'
+        'humano+reproducao': 'familia',
+        'medo+sono': 'pesadelo',
+        'humano+sono': 'quarto',
+        'humano+fogo': 'cozinha',
+        'humano+agua': 'banheiro',
+        'humano+familia': 'sala'
     }
 };
+
 
 
 // Estado do Jogo
