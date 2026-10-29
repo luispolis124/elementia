@@ -1,6 +1,9 @@
 // ==========================================
 // 1. BANCO DE DADOS DE ELEMENTOS E RECEITAS
 // ==========================================
+// ==========================================
+// 1. BANCO DE DADOS DE ELEMENTOS E RECEITAS
+// ==========================================
 const database = {
     elements: {
         // Primordiais
@@ -46,8 +49,9 @@ const database = {
         chuva: { name: 'Chuva', emoji: '🌧️', rarity: 'Comum', unlocked: false },
         reproducao: { name: 'Reprodução', emoji: '🐭', rarity: 'Raro', unlocked: false },
         humano: { name: 'Humano', emoji: '🧑', rarity: 'Lendário', unlocked: false }, 
+        montanha: { name: 'Montanha', emoji: '⛰️', rarity: 'Comum', unlocked: false },
         
-        // Elementos Bíblicos e Expansão Teológica (Adão até Jesus e Deus)
+        // Elementos Bíblicos e Expansão Teológica
         adao: { name: 'Adão', emoji: '🧔🏻‍♂️', rarity: 'Lendário', unlocked: false }, 
         eva: { name: 'Eva', emoji: '👩🏻', rarity: 'Lendário', unlocked: false },
         cain: { name: 'Caim', emoji: '🗡️', rarity: 'Raro', unlocked: false },     
@@ -85,7 +89,22 @@ const database = {
         cozinha: { name: 'Cozinha', emoji: '🍳', rarity: 'Comum', unlocked: false },
         quarto: { name: 'Quarto', emoji: '🛏️', rarity: 'Comum', unlocked: false },
         banheiro: { name: 'Banheiro', emoji: '🚽', rarity: 'Raro', unlocked: false }, 
-        sala: { name: 'Sala', emoji: '🛋️', rarity: 'Comum', unlocked: false } 
+        sala: { name: 'Sala', emoji: '🛋️', rarity: 'Comum', unlocked: false },
+        
+        // Elementos Animais Expandidos
+        leao: { name: 'Leão', emoji: '🦁', rarity: 'Comum', unlocked: false },
+        tigre: { name: 'Tigre', emoji: '🐯', rarity: 'Raro', unlocked: false },
+        leoa: { name: 'Leoa', emoji: '🦁', rarity: 'Comum', unlocked: false },
+        tigresa: { name: 'Tigresa', emoji: '🐯', rarity: 'Raro', unlocked: false },
+        lobo: { name: 'Lobo', emoji: '🐺', rarity: 'Incomum', unlocked: false },
+        urso: { name: 'Urso', emoji: '🐻', rarity: 'Incomum', unlocked: false },
+        aguia: { name: 'Águia', emoji: '🦅', rarity: 'Raro', unlocked: false },
+        serpente: { name: 'Serpente', emoji: '🐍', rarity: 'Incomum', unlocked: false },
+        gato: { name: 'Gato', emoji: '🐱', rarity: 'Comum', unlocked: false },
+        cachorro: { name: 'Cachorro', emoji: '🐶', rarity: 'Comum', unlocked: false }, 
+        musaranho: { name: 'Musaranho', emoji: '🐁', rarity: 'Comum', unlocked: false },
+        quokka: { name: 'Quokka', emoji: '😁', rarity: 'Comum', unlocked: false }, // <- Vírgula corrigida aqui
+        urso_gato: { name: 'Urso Gato', emoji: '🐈🐻', rarity: 'Comum', unlocked: false }
     },
 
     recipes: {
@@ -100,7 +119,6 @@ const database = {
         'agua+energia': 'vida',
         'terra+energia': 'pedra',
 
-        // Novas receitas
         'ar+vapor': 'nuvem',
         'fogo+pedra': 'metal',
         'vida+ciclo': 'ciclo_vida',
@@ -116,6 +134,7 @@ const database = {
         'vida+planta': 'animal',
         'agua+oceano': 'tsunami', 
         'terra+terra': 'pangeia',
+        'pedra+pedra': 'montanha',
         'lava+lava': 'vulcao',
         'arvore+arvore': 'selva',
         'arvore+selva': 'floresta',
@@ -127,7 +146,6 @@ const database = {
         'animal+animal': 'reproducao',
         'vida+animal': 'humano',
         
-        // Receitas Bíblicas (Adão até Jesus e Deus)
         'humano+terra': 'adao',
         'humano+vida': 'eva',
         'adao+eva': 'cain',
@@ -142,7 +160,6 @@ const database = {
         'sem+reproducao': 'cam',
         'cam+reproducao': 'jafe',
         
-        // Novas conexões até Jesus e Deus
         'humano+oceano': 'moises',
         'moises+pedra': 'dez_mandamentos',
         'humano+energia': 'anjo',
@@ -151,7 +168,6 @@ const database = {
         'vida+jesus': 'deus',
         'ciclo_vida+energia': 'deus',
 
-        // Receitas de Emoções (Humano + Sentimentos/Natureza)
         'humano+flor': 'alegria',
         'humano+chuva': 'tristeza',
         'humano+fogo': 'raiva',
@@ -162,17 +178,29 @@ const database = {
         'humano+animal': 'inveja',
         'humano+deserto': 'tedio',
 
-        // Receitas de Vida Real (Sono, Família e Cômodos)
         'humano+ciclo': 'sono',
         'humano+reproducao': 'familia',
         'medo+sono': 'pesadelo',
         'humano+sono': 'quarto',
         'humano+fogo': 'cozinha',
         'humano+agua': 'banheiro',
-        'humano+familia': 'sala'
+        'humano+familia': 'sala',
+
+        'animal+selva': 'leao',
+        'leao+selva': 'tigre',
+        'leao+reproducao': 'leoa',
+        'tigre+reproducao': 'tigresa',
+        'animal+floresta': 'lobo',
+        'animal+montanha': 'urso',
+        'animal+ar': 'aguia',
+        'animal+deserto': 'serpente',
+        'humano+animal': 'gato',
+        'animal+familia': 'cachorro',
+        'animal+terra': 'musaranho',
+        'animal+alegria': 'quokka',
+        'urso+gato': 'urso_gato'
     }
 };
-
 
 
 // Estado do Jogo
